@@ -1,2 +1,3 @@
 # WebKer
-Project for Webfejlesztési Keretrendszerek for SZTE
+Project for Webfejlesztési Keretrendszerek at SZTE
+
