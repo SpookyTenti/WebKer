@@ -1,3 +1,32 @@
+#  🚀 Projekt futtatása
+##  A projekt Vite + React alapokra épül. A futtatáshoz Node.js szükséges (ajánlott verzió: 18).
+
+###  1. Függőségek telepítése
+   ```bash
+   npm install
+   ```
+###  2. Fejlesztői szerver indítása
+  ```bash
+  npm run dev
+  ```
+#### A projekt ezutan a böngészőben localhoston elérhető
+  ```
+  https://localhost:5173
+  ```
+### 3. Build készítése (opcionális)
+  ```
+  npm run build
+  ```
+### 4. Build előnézete
+  ```
+  npm run preview
+  ```
+#### A buildelt verzió előnézete legtöbbször itt érhető el:
+  ```
+  https://localhost:4173
+  ```
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
