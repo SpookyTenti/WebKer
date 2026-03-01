@@ -1,6 +1,4 @@
-/* =========================
-   NAV WRAPPER
-========================= */
+/*NAV WRAPPER*/
 nav {
   position: fixed;
   top: 20px;
@@ -12,9 +10,7 @@ nav {
   z-index: 1000;
 }
 
-/* =========================
-   GLASS CONTAINER
-========================= */
+/* GLASS CONTAINER */
 nav > div {
   width: 100%;
   height: 100%;
@@ -35,9 +31,7 @@ nav > div {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* =========================
-   HAMBURGER
-========================= */
+/*HAMBURGER*/
 nav button {
   font-size: 28px;
   background: none;
@@ -53,9 +47,7 @@ nav button:hover {
   transform: scale(1.1);
 }
 
-/* =========================
-   MENU DESKTOP
-========================= */
+/* MENU DESKTOP */
 nav ul {
   list-style: none;
   display: flex !important;
@@ -92,9 +84,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* =========================
-   LOGIN + REGISTER BUTTON
-========================= */
+/*LOGIN + REGISTER BUTTON*/
 nav ul li a[href='/login'],
 nav ul li a[href='/register'] {
   background: linear-gradient(135deg, #f2c75c, #ffe08a);
@@ -111,9 +101,7 @@ nav ul li a[href='/register']:hover {
   box-shadow: 0 6px 18px rgba(242, 199, 92, 0.5);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*   RESPONSIVE */
 @media (max-width: 900px) {
   nav {
     top: 10px;
@@ -150,9 +138,7 @@ nav ul li a[href='/register']:hover {
   }
 }
 
-/* =========================
-   MOBILE ANIMATION
-========================= */
+/* MOBILE ANIMATION */
 @keyframes fadeSlide {
   from {
     opacity: 0;

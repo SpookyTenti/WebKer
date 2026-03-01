@@ -14,7 +14,7 @@ export default function Navbar() {
       <div>
         <button onClick={() => setOpen(!open)}>☰</button>
 
-        <ul style={{ display: open ? 'block' : 'none' }}>
+        <ul>
           <li>
             <Link to="/">Főoldal</Link>
           </li>
