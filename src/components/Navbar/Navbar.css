@@ -1,58 +1,95 @@
-/*.navbar {
-  width: 100%;
-  background: #0f3d2e;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+*,
+::before,
+*::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  flex-wrap: nowrap;
-}*/
-.navbar {
+}
+
+/* A NAVBAR legyen teljes szélességű */
+nav {
   width: 100%;
-  background: #0f3d2e;
-  color: white;
-  padding: 1rem 2rem;
+  height: 80px;
+  background: #003b49;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* JOBBRA IGAZÍTÁS */
   align-items: center;
-  box-sizing: border-box;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-.nav-logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  border-radius: 0 0 10px 10px; /* enyhén lekerekített alsó sarkok */
 }
 
-.nav-links {
+/* A menülista jobbra igazítva */
+.nav--list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* JOBBRA */
+  align-items: center;
+  gap: 20px; /* TÁVOLSÁG A MENÜPONTOK KÖZÖTT */
+}
+
+/* A menüpontok dobozai */
+.item {
+  position: relative;
+  width: 140px;
+  height: 40px;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid #f2c75c;
+  border-radius: 5px; /* lekerekített sarkok a gombokon */
+  overflow: hidden;
 }
 
-.nav-links a {
-  color: white;
+/* A linkek */
+.item a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #f2c75c;
+  z-index: 10;
   text-decoration: none;
-  font-weight: 500;
+  transition: color 200ms ease;
 }
 
-.login-btn {
-  padding: 0.4rem 0.8rem;
-  background: #1b7f5f;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+/* Hover animáció */
+.item:hover a {
+  color: #003b49;
 }
 
-.register-btn {
-  padding: 0.4rem 0.8rem;
-  background: #145c43;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+.item:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transform: skew(30deg);
+  background: #f2c75c;
+  transition: width 400ms ease;
+}
+
+.item:hover:before {
+  width: 120%;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    padding: 10px 20px;
+  }
+  .nav--list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .item {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 8px 0;
+  }
+  .item a {
+    font-size: 14px;
+  }
 }
