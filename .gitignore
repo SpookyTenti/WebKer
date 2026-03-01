@@ -1,22 +1,26 @@
-
+# Node modules
 node_modules/
 
-
+# Build output
 dist/
-build/
+.vite/
 
-.firebase/
-firebase-debug.log
-.firebaserc
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
+# Environment variables
 .env
-.env.local
-.env.development
-.env.production
+.env.*
 
+# Editor directories and files
 .vscode/
 .idea/
+*.swp
 
+<<<<<<< HEAD
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -25,7 +29,11 @@ server.json
 
 
 
+=======
+# System files
+>>>>>>> cc0c9731e9d71acdc93c25376a63274a0c822b10
 .DS_Store
+Thumbs.db
 
-
-*~
+# Test coverage
+coverage/
