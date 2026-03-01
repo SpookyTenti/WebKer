@@ -24,6 +24,10 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route
+          path="/profil"
+          element={<div>Profil oldal (később fejlesztendő)</div>}
+        />
+        <Route
           path="/admin"
           element={<div>Admin oldal (később fejlesztendő)</div>}
         />

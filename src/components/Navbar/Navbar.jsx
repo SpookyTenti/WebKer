@@ -5,12 +5,12 @@ import './Navbar.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
-  const isLoggedIn = false
+  const isLoggedIn = false // teszt
   const isAdmin = false
 
   return (
     <nav>
-      <div className="nav-inner">
+      <div className={`nav-inner ${isLoggedIn ? 'logged-in' : ''}`}>
         <button onClick={() => setOpen(!open)}>☰</button>
 
         <ul style={{ display: open ? 'flex' : '' }}>

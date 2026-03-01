@@ -155,3 +155,7 @@ nav ul li a[href='/register']:hover {
 nav ul {
   gap: 20px;
 }
+
+.nav-inner.logged-in {
+  max-width: 650px; /*  ha be van jelentkezve, keskenyebb */
+}
