@@ -20,7 +20,6 @@ pnpm-debug.log*
 .idea/
 *.swp
 
-<<<<<<< HEAD
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -29,9 +28,6 @@ server.json
 
 
 
-=======
-# System files
->>>>>>> cc0c9731e9d71acdc93c25376a63274a0c822b10
 .DS_Store
 Thumbs.db
 
