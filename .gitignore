@@ -12,6 +12,7 @@ dist/
 .env
 .env.*
 
+
 # Editor directories and files
 .vscode/
 .idea/
@@ -28,3 +29,8 @@ coverage/
 
 # Local config overrides
 *.local
+
+#extensions
+.eslintcache
+.prettiercache
+.prettierrc
