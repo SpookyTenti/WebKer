@@ -1,25 +1,62 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 export default function Navbar() {
-  return (
-    <nav className="navbar">
-      <Link to="/" className="nav-logo">
-        Krammer Hidraulika
-      </Link>
+  const [open, setOpen] = useState(false)
 
-      <div className="nav-links">
-        <Link to="/">Főoldal</Link>
-        <Link to="/szolgaltatasok">Szolgáltatások</Link>
-        <Link to="/munkatarsaink">Munkatársaink</Link>
-        <Link to="/termekek">Termékek</Link>
-        <Link to="/rolunk">Rólunk</Link>
-        <Link to="/login" className="login-btn">
-          Bejelentkezés
-        </Link>
-        <Link to="/register" className="register-btn">
-          Regisztráció
-        </Link>
+  // ideiglenes állapotok
+  const isLoggedIn = false // ha be van jelentkezve
+  const isAdmin = false // ha admin
+
+  return (
+    <nav>
+      <div>
+        <button onClick={() => setOpen(!open)}>☰</button>
+
+        <ul style={{ display: open ? 'block' : 'none' }}>
+          <li>
+            <Link to="/">Főoldal</Link>
+          </li>
+          <li>
+            <Link to="/szolgaltatasok">Szolgáltatások</Link>
+          </li>
+          <li>
+            <Link to="/munkatarsaink">Munkatársaink</Link>
+          </li>
+          <li>
+            <Link to="/termekek">Termékek</Link>
+          </li>
+          <li>
+            <Link to="/rolunk">Rólunk</Link>
+          </li>
+
+          {/* Ha nincs bejelentkezve → Login + Regisztráció */}
+          {!isLoggedIn && (
+            <>
+              <li>
+                <Link to="/login">Bejelentkezés</Link>
+              </li>
+              <li>
+                <Link to="/register">Regisztráció</Link>
+              </li>
+            </>
+          )}
+
+          {/* Ha be van jelentkezve → Profil */}
+          {isLoggedIn && (
+            <li>
+              <Link to="/profil">Profilom</Link>
+            </li>
+          )}
+
+          {/* Ha admin → Admin fül */}
+          {isLoggedIn && isAdmin && (
+            <li>
+              <Link to="/admin">Admin</Link>
+            </li>
+          )}
+        </ul>
       </div>
     </nav>
   )

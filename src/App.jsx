@@ -23,6 +23,10 @@ export default function App() {
         <Route path="/rolunk" element={<Rolunk />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route
+          path="/admin"
+          element={<div>Admin oldal (később fejlesztendő)</div>}
+        />
 
         <Route path="*" element={<NotFound />} />
       </Route>

@@ -1,58 +1,165 @@
-/*.navbar {
+/* =========================
+   NAV WRAPPER
+========================= */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  height: 70px;
+  z-index: 1000;
+}
+
+/* =========================
+   GLASS CONTAINER
+========================= */
+nav > div {
   width: 100%;
-  background: #0f3d2e;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  box-sizing: border-box;
-  flex-wrap: nowrap;
-}*/
-.navbar {
+  padding: 0 30px;
+
+  background: rgba(0, 59, 73, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+nav button {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #f2c75c;
+  cursor: pointer;
+  display: none;
+  justify-self: start;
+  transition: transform 0.3s ease;
+}
+
+nav button:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   MENU DESKTOP
+========================= */
+nav ul {
+  list-style: none;
+  display: flex !important;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+}
+
+nav ul li a {
+  color: #f2c75c;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Underline animation */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #f2c75c;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
   width: 100%;
-  background: #0f3d2e;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-.nav-logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+/* =========================
+   LOGIN + REGISTER BUTTON
+========================= */
+nav ul li a[href='/login'],
+nav ul li a[href='/register'] {
+  background: linear-gradient(135deg, #f2c75c, #ffe08a);
+  color: #003b49;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+nav ul li a[href='/login']:hover,
+nav ul li a[href='/register']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(242, 199, 92, 0.5);
 }
 
-.login-btn {
-  padding: 0.4rem 0.8rem;
-  background: #1b7f5f;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  nav {
+    top: 10px;
+    width: 92%;
+  }
+
+  nav > div {
+    grid-template-columns: auto auto;
+  }
+
+  nav button {
+    display: block;
+  }
+
+  nav ul {
+    display: none !important;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 25px 0;
+    gap: 22px;
+
+    background: rgba(0, 59, 73, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+
+    animation: fadeSlide 0.3s ease forwards;
+  }
+
+  nav ul[style*='block'] {
+    display: flex !important;
+  }
 }
 
-.register-btn {
-  padding: 0.4rem 0.8rem;
-  background: #145c43;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+/* =========================
+   MOBILE ANIMATION
+========================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
