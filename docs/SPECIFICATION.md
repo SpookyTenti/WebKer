@@ -22,7 +22,7 @@ A célközönség:
 - Kapcsolat oldal megtekintése
 - Termékek megtekintése
 - Munkatársak megtekintése
-- Bejelentkezés oldal
+- Bejelentkezés/Regisztrációs oldal
 
 ### User funkciók
 
@@ -45,7 +45,7 @@ A célközönség:
 ### Technológiai követelmények
 
 - **Frontend:** React + Vite
-- **Stílus:** Tailwind CSS + SCSS design token rendszer
+- **Stílus:** Tailwind/CSS + SCSS design token rendszer
 - **Állapotkezelés:** React Context (AuthContext)
 - **Backend:** Firebase Authentication + Firestore
 - **Routing:** React Router

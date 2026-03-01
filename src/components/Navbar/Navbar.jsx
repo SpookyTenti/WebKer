@@ -5,16 +5,15 @@ import './Navbar.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
-  // ideiglenes állapotok
-  const isLoggedIn = false // ha be van jelentkezve
-  const isAdmin = false // ha admin
+  const isLoggedIn = false
+  const isAdmin = false
 
   return (
     <nav>
-      <div>
+      <div className="nav-inner">
         <button onClick={() => setOpen(!open)}>☰</button>
 
-        <ul>
+        <ul style={{ display: open ? 'flex' : '' }}>
           <li>
             <Link to="/">Főoldal</Link>
           </li>
@@ -31,7 +30,6 @@ export default function Navbar() {
             <Link to="/rolunk">Rólunk</Link>
           </li>
 
-          {/* Ha nincs bejelentkezve → Login + Regisztráció */}
           {!isLoggedIn && (
             <>
               <li>
@@ -43,14 +41,11 @@ export default function Navbar() {
             </>
           )}
 
-          {/* Ha be van jelentkezve → Profil */}
           {isLoggedIn && (
             <li>
               <Link to="/profil">Profilom</Link>
             </li>
           )}
-
-          {/* Ha admin → Admin fül */}
           {isLoggedIn && isAdmin && (
             <li>
               <Link to="/admin">Admin</Link>

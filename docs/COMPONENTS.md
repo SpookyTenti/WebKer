@@ -2,7 +2,7 @@
 
 ### Public oldalak
 
-- **Home** → Hero, ServiceCard, EmployeeCard
+- **Home** → Hero
 - **Rólunk** → Static content
 - **Szolgáltatások** → ServiceCard lista
 - **Kapcsolat** → Static content

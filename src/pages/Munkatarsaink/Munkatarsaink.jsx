@@ -1,6 +1,6 @@
 export default function Munkatarsaink() {
   return (
-    <div className="page-container">
+    <div>
       <h1>Munkatársaink</h1>
     </div>
   )

@@ -1,6 +1,6 @@
 export default function Rolunk() {
   return (
-    <div className="page-container">
+    <div>
       <h1>Rólunk oldal működik</h1>
     </div>
   )

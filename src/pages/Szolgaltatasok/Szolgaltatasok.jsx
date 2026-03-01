@@ -1,6 +1,6 @@
 export default function Szolgaltatasok() {
   return (
-    <div className="page-container">
+    <div>
       <h1>Szolgáltatások</h1>
     </div>
   )

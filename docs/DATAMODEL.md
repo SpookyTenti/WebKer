@@ -34,7 +34,6 @@
 - `name: string`
 - `position: string`
 - `imageUrl: string`
-- `bio: string`
 
 ---
 

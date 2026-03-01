@@ -1,6 +1,6 @@
 export default function Termekek() {
   return (
-    <div className="page-container">
+    <div>
       <h1>Termékek</h1>
     </div>
   )
