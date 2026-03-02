@@ -36,7 +36,7 @@ nav > div {
 
 /* HAMBURGER BUTTON */
 nav button {
-  position: absolute;
+  position: center;
   left: 20px;
   font-size: 28px;
   background: none;
@@ -124,7 +124,7 @@ nav ul li a[href='/register']:hover {
     padding: 25px 0;
     gap: 22px;
 
-    background: rgba(0, 58, 73, 0.877); /* lenyitott navbar szine*/
+    background: rgba(0, 58, 73, 0.938); /* lenyitott navbar szine*/
     backdrop-filter: blur(20px);
     border-radius: 20px;
 
