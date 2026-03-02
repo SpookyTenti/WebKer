@@ -20,7 +20,7 @@ nav > div {
   align-items: center;
   padding: 0 30px;
 
-  background: rgba(0, 59, 73, 0.65);
+  background: rgba(0, 58, 73, 0.781); /*NAVBar open szine*/
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
@@ -124,7 +124,7 @@ nav ul li a[href='/register']:hover {
     padding: 25px 0;
     gap: 22px;
 
-    background: rgba(0, 59, 73, 0.95);
+    background: rgba(0, 58, 73, 0.877); /* lenyitott navbar szine*/
     backdrop-filter: blur(20px);
     border-radius: 20px;
 
