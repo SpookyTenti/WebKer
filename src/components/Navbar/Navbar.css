@@ -159,3 +159,20 @@ nav ul {
 .nav-inner.logged-in {
   max-width: 650px; /*  ha be van jelentkezve, keskenyebb */
 }
+/* Csak a login és register gombokra */
+nav ul li a[href='/login'],
+nav ul li a[href='/register'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  nav ul li a[href='/login'],
+  nav ul li a[href='/register'] {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+}
