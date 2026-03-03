@@ -11,27 +11,22 @@ import Rolunk from './pages/Rolunk/Rolunk'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import NotFound from './pages/NotFound/NotFound'
+import Profile from './pages/Profile/profile'
+import Admin from './pages/Admin/Admin'
 
 export default function App() {
   return (
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/szolgaltatasok" element={<Szolgaltatasok />} />
-        <Route path="/munkatarsaink" element={<Munkatarsaink />} />
+        <Route path="/Szolgaltatasok" element={<Szolgaltatasok />} />
+        <Route path="/Munkatarsaink" element={<Munkatarsaink />} />
         <Route path="/termekek" element={<Termekek />} />
         <Route path="/rolunk" element={<Rolunk />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/profil"
-          element={<div>Profil oldal (később fejlesztendő)</div>}
-        />
-        <Route
-          path="/admin"
-          element={<div>Admin oldal (később fejlesztendő)</div>}
-        />
-
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

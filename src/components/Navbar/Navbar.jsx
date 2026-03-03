@@ -5,7 +5,7 @@ import './Navbar.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
-  const isLoggedIn = false // teszt
+  const isLoggedIn = true // teszt
   const isAdmin = false
 
   return (
@@ -18,32 +18,32 @@ export default function Navbar() {
             <Link to="/">Főoldal</Link>
           </li>
           <li>
-            <Link to="/szolgaltatasok">Szolgáltatások</Link>
+            <Link to="/Szolgaltatasok">Szolgáltatások</Link>
           </li>
           <li>
-            <Link to="/munkatarsaink">Munkatársaink</Link>
+            <Link to="/Munkatarsaink">Munkatársaink</Link>
           </li>
           <li>
-            <Link to="/termekek">Termékek</Link>
+            <Link to="/Termekek">Termékek</Link>
           </li>
           <li>
-            <Link to="/rolunk">Rólunk</Link>
+            <Link to="/Rolunk">Rólunk</Link>
           </li>
 
           {!isLoggedIn && (
             <>
               <li>
-                <Link to="/login">Bejelentkezés</Link>
+                <Link to="/Login">Bejelentkezés</Link>
               </li>
               <li>
-                <Link to="/register">Regisztráció</Link>
+                <Link to="/Register">Regisztráció</Link>
               </li>
             </>
           )}
 
           {isLoggedIn && (
             <li>
-              <Link to="/profil">Profilom</Link>
+              <Link to="/Profile">Profilom</Link>
             </li>
           )}
           {isLoggedIn && isAdmin && (
